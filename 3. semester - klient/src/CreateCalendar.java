@@ -15,6 +15,7 @@ public class CreateCalendar extends JFrame {
 	private JLabel lblNewLabel;
 	private JButton btnShareCalendar;
 	private JButton btnBackToMenu;
+	private JButton btnCreate;
 
 	/**
 	 * Launch the application.
@@ -36,6 +37,7 @@ public class CreateCalendar extends JFrame {
 	 * Create the frame.
 	 */
 	public CreateCalendar() {
+		setTitle("Marie's Calendar");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 805, 399);
 		contentPane = new JPanel();
@@ -55,6 +57,10 @@ public class CreateCalendar extends JFrame {
 		btnBackToMenu = new JButton("Back to menu");
 		btnBackToMenu.setBounds(344, 240, 117, 29);
 		contentPane.add(btnBackToMenu);
+		
+		btnCreate = new JButton("Create");
+		btnCreate.setBounds(344, 158, 117, 29);
+		contentPane.add(btnCreate);
 	}
 
 }

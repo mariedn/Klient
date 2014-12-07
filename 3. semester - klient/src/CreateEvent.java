@@ -37,6 +37,7 @@ public class CreateEvent extends JFrame {
 	 * Create the frame.
 	 */
 	public CreateEvent() {
+		setTitle("Marie's Calendar");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 804, 399);
 		contentPane = new JPanel();

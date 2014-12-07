@@ -37,6 +37,7 @@ public class CreateNote extends JFrame {
 	 * Create the frame.
 	 */
 	public CreateNote() {
+		setTitle("Marie's Calendar");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 804, 397);
 		contentPane = new JPanel();

@@ -14,10 +14,6 @@ import javax.swing.JButton;
 public class Login extends JFrame {
 
 	private JPanel contentPane;
-	/**
-	 * @wbp.nonvisual location=-21,371
-	 */
-	private final JPanel panel = new JPanel();
 	private JLabel lblWelcomeToCbs;
 	private JLabel lblPleaseLogin;
 	private JTextField textField;
@@ -46,6 +42,7 @@ public class Login extends JFrame {
 	 * Create the frame.
 	 */
 	public Login() {
+		setTitle("Marie's Calendar");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 805, 400);
 		contentPane = new JPanel();

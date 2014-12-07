@@ -14,6 +14,8 @@ public class Weather extends JFrame {
 	private JPanel contentPane;
 	private JLabel lblNewLabel;
 	private JButton btnBackToMenu;
+	private JLabel lblTheQuoteOf;
+	private JButton btnLogout;
 
 	/**
 	 * Launch the application.
@@ -35,8 +37,9 @@ public class Weather extends JFrame {
 	 * Create the frame.
 	 */
 	public Weather() {
+		setTitle("Marie's Calendar");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 804, 399);
+		setBounds(100, 100, 806, 399);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -44,12 +47,21 @@ public class Weather extends JFrame {
 		
 		lblNewLabel = new JLabel("Weather");
 		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 27));
-		lblNewLabel.setBounds(343, 0, 117, 40);
+		lblNewLabel.setBounds(344, 6, 117, 40);
 		contentPane.add(lblNewLabel);
 		
 		btnBackToMenu = new JButton("Back to menu");
-		btnBackToMenu.setBounds(343, 236, 117, 29);
+		btnBackToMenu.setBounds(344, 240, 117, 29);
 		contentPane.add(btnBackToMenu);
+		
+		lblTheQuoteOf = new JLabel("Let's go check out the weather");
+		lblTheQuoteOf.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
+		lblTheQuoteOf.setBounds(296, 54, 213, 16);
+		contentPane.add(lblTheQuoteOf);
+		
+		btnLogout = new JButton("Log-out");
+		btnLogout.setBounds(344, 281, 117, 29);
+		contentPane.add(btnLogout);
 	}
 
 }

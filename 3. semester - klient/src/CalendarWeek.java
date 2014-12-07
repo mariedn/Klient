@@ -37,6 +37,7 @@ public class CalendarWeek extends JFrame {
 	private JLabel lblSaturday;
 	private JLabel lblSunday;
 	private JTable table;
+	private JButton btnAddNote_1;
 
 	/**
 	 * Launch the application.
@@ -58,6 +59,7 @@ public class CalendarWeek extends JFrame {
 	 * Create the frame.
 	 */
 	public CalendarWeek() {
+		setTitle("Marie's Calendar");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 806, 402);
 		contentPane = new JPanel();
@@ -67,7 +69,7 @@ public class CalendarWeek extends JFrame {
 		
 		lblWeekView = new JLabel("Week view");
 		lblWeekView.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 27));
-		lblWeekView.setBounds(300, 6, 205, 33);
+		lblWeekView.setBounds(326, 6, 153, 33);
 		contentPane.add(lblWeekView);
 		
 		btnDayView = new JButton("Day view");
@@ -87,7 +89,7 @@ public class CalendarWeek extends JFrame {
 		contentPane.add(btnDeleteNote);
 		
 		btnDeleteEvent = new JButton("Delete Event");
-		btnDeleteEvent.setBounds(683, 200, 117, 29);
+		btnDeleteEvent.setBounds(683, 241, 117, 29);
 		contentPane.add(btnDeleteEvent);
 		
 		btnMenu = new JButton("Menu");
@@ -95,11 +97,11 @@ public class CalendarWeek extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnMenu.setBounds(683, 241, 117, 29);
+		btnMenu.setBounds(683, 282, 117, 29);
 		contentPane.add(btnMenu);
 		
 		btnLogout = new JButton("Log-out");
-		btnLogout.setBounds(683, 282, 117, 29);
+		btnLogout.setBounds(683, 323, 117, 29);
 		contentPane.add(btnLogout);
 		
 		lblTime = new JLabel("Time");
@@ -145,6 +147,10 @@ public class CalendarWeek extends JFrame {
 		table = new JTable();
 		table.setBounds(404, 159, -29, -52);
 		contentPane.add(table);
+		
+		btnAddNote_1 = new JButton("Add Event");
+		btnAddNote_1.setBounds(683, 200, 117, 29);
+		contentPane.add(btnAddNote_1);
 	}
 
 }

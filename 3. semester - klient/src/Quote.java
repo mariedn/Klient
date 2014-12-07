@@ -14,6 +14,8 @@ public class Quote extends JFrame {
 	private JPanel contentPane;
 	private JLabel lblNewLabel;
 	private JButton btnBackToMenu;
+	private JLabel lblTheQuoteOf;
+	private JButton btnLogout;
 
 	/**
 	 * Launch the application.
@@ -35,6 +37,7 @@ public class Quote extends JFrame {
 	 * Create the frame.
 	 */
 	public Quote() {
+		setTitle("Marie's Calendar");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 806, 399);
 		contentPane = new JPanel();
@@ -50,6 +53,15 @@ public class Quote extends JFrame {
 		btnBackToMenu = new JButton("Back to menu");
 		btnBackToMenu.setBounds(344, 240, 117, 29);
 		contentPane.add(btnBackToMenu);
+		
+		lblTheQuoteOf = new JLabel("The quote of the day, enjoy");
+		lblTheQuoteOf.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
+		lblTheQuoteOf.setBounds(307, 54, 192, 16);
+		contentPane.add(lblTheQuoteOf);
+		
+		btnLogout = new JButton("Log-out");
+		btnLogout.setBounds(344, 281, 117, 29);
+		contentPane.add(btnLogout);
 	}
 
 }
