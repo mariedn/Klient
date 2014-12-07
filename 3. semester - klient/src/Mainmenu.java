@@ -7,15 +7,17 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JList;
+import javax.swing.JButton;
 
 
-public class Overview extends JFrame {
+public class Mainmenu extends JFrame {
 
 	private JPanel contentPane;
 	private JLabel lblKalendere;
 	private JLabel lblEgneKalendere;
 	private JLabel lblDelteKalender;
 	private JList list;
+	private JButton btnCreateNewCalendar;
 
 	/**
 	 * Launch the application.
@@ -24,7 +26,7 @@ public class Overview extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Overview frame = new Overview();
+					Mainmenu frame = new Mainmenu();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -36,7 +38,7 @@ public class Overview extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Overview() {
+	public Mainmenu() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -60,6 +62,10 @@ public class Overview extends JFrame {
 		list = new JList();
 		list.setBounds(16, 105, 1, 1);
 		contentPane.add(list);
+		
+		btnCreateNewCalendar = new JButton("Create new calendar");
+		btnCreateNewCalendar.setBounds(133, 243, 178, 29);
+		contentPane.add(btnCreateNewCalendar);
 		
 	}
 }
