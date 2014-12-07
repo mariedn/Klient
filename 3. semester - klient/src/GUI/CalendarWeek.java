@@ -1,3 +1,4 @@
+package GUI;
 import java.awt.EventQueue;
 
 import javax.swing.JPanel;
@@ -11,9 +12,12 @@ import javax.swing.JButton;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JScrollPane;
+import javax.swing.JScrollBar;
+import java.awt.Color;
 
 
-public class CalendarDay extends JPanel {
+public class CalendarWeek extends JPanel {
 
 	private JPanel contentPane;
 	private JLabel lblWeekView;
@@ -33,6 +37,7 @@ public class CalendarDay extends JPanel {
 	private JLabel lblSunday;
 	private JTable table;
 	private JButton btnAddNote_1;
+	private JScrollBar scrollBar;
 
 	/**
 	 * Launch the application.
@@ -53,18 +58,18 @@ public class CalendarDay extends JPanel {
 	/**
 	 * Create the frame.
 	 */
-	public CalendarDay() {
+	public CalendarWeek() {
 		setBounds(100, 100, 800, 400);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(null);
 		
-		lblWeekView = new JLabel("Day view");
+		lblWeekView = new JLabel("Week view");
 		lblWeekView.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 27));
-		lblWeekView.setBounds(336, 5, 134, 33);
+		lblWeekView.setBounds(326, 5, 153, 33);
 		contentPane.add(lblWeekView);
 		
-		btnDayView = new JButton("Week view");
+		btnDayView = new JButton("Day view");
 		btnDayView.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -136,13 +141,42 @@ public class CalendarDay extends JPanel {
 		lblSunday.setBounds(560, 58, 61, 16);
 		contentPane.add(lblSunday);
 		
-		table = new JTable();
-		table.setBounds(404, 159, -29, -52);
+		
+		String [] columnNames = {"time", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+		Object [][] data = {
+				{"01.00", null, null, null, null, null, null, null},
+				{"02.00", null, null, null, null, null, null, null},
+				{"03.00", null, null, null, null, null, null, null},
+				{"04.00", null, null, null, null, null, null, null},
+				{"05.00", null, null, null, null, null, null, null},
+				{"06.00", null, null, null, null, null, null, null},
+				{"07.00", null, null, null, null, null, null, null},
+				{"08.00", null, null, null, null, null, null, null},
+				{"09.00", null, null, null, null, null, null, null},
+				{"10.00", null, null, null, null, null, null, null},
+				{"11.00", null, null, null, null, null, null, null},
+				{"12.00", null, null, null, null, null, null, null},
+				{"13.00", null, null, null, null, null, null, null},
+				{"14.00", null, null, null, null, null, null, null},
+				{"15.00", null, null, null, null, null, null, null},
+				{"16.00", null, null, null, null, null, null, null},
+				{"17.00", null, null, null, null, null, null, null},
+				{"18.00", null, null, null, null, null, null, null},
+				{"19.00", null, null, null, null, null, null, null},
+				{"20.00", null, null, null, null, null, null, null},
+				{"21.00", null, null, null, null, null, null, null},
+				{"22.00", null, null, null, null, null, null, null},
+				{"23.00", null, null, null, null, null, null, null},
+				{"24.00", null, null, null, null, null, null, null},
+		};
+		table = new JTable(data, columnNames);
 		contentPane.add(table);
+		table.setRowHeight(13);
+		table.setShowGrid(true);
+		table.setBounds(10, 80, 650, 315);
 		
 		btnAddNote_1 = new JButton("Add Event");
 		btnAddNote_1.setBounds(683, 200, 117, 29);
 		contentPane.add(btnAddNote_1);
 	}
-
 }

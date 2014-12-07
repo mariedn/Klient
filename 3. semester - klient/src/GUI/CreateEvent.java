@@ -1,3 +1,4 @@
+package GUI;
 import java.awt.EventQueue;
 
 import javax.swing.JButton;
@@ -8,7 +9,7 @@ import javax.swing.JLabel;
 import java.awt.Font;
 
 
-public class CreateNote extends JPanel {
+public class CreateEvent extends JPanel {
 
 	private JPanel contentPane;
 	private JLabel lblNewLabel;
@@ -18,7 +19,7 @@ public class CreateNote extends JPanel {
 	/**
 	 * Launch the application.
 	 */
-	 {
+	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -34,15 +35,15 @@ public class CreateNote extends JPanel {
 	/**
 	 * Create the frame.
 	 */
-	public CreateNote() {
+	public CreateEvent() {
 		setBounds(100, 100, 800, 400);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(null);
 		
-		lblNewLabel = new JLabel("Create note");
+		lblNewLabel = new JLabel("Create event");
 		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 27));
-		lblNewLabel.setBounds(318, 5, 168, 40);
+		lblNewLabel.setBounds(311, 5, 182, 40);
 		contentPane.add(lblNewLabel);
 		
 		btnShareCalendar = new JButton("Create");
