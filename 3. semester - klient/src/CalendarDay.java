@@ -1,17 +1,12 @@
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
-import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 
 import java.awt.Font;
 
-import javax.swing.JScrollPane;
 import javax.swing.JTable;
-import javax.swing.border.CompoundBorder;
-import javax.swing.JToolBar;
 import javax.swing.JButton;
 
 import java.awt.event.ActionListener;
@@ -59,12 +54,9 @@ public class CalendarDay extends JPanel {
 	 * Create the frame.
 	 */
 	public CalendarDay() {
-		setTitle("Marie's Calendar");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 806, 402);
+		setBounds(100, 100, 800, 400);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		lblWeekView = new JLabel("Day view");

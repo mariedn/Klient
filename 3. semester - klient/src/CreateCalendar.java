@@ -1,7 +1,5 @@
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
-import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
@@ -37,12 +35,9 @@ public class CreateCalendar extends JPanel {
 	 * Create the frame.
 	 */
 	public CreateCalendar() {
-		setTitle("Marie's Calendar");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 805, 399);
+		setBounds(100, 100, 800, 400);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		lblNewLabel = new JLabel("Create new calendar");
