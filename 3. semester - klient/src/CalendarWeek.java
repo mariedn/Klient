@@ -18,7 +18,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 
-public class CalendarWeek extends JFrame {
+public class CalendarWeek extends JPanel {
 
 	private JPanel contentPane;
 	private JLabel lblWeekView;
@@ -69,7 +69,7 @@ public class CalendarWeek extends JFrame {
 		
 		lblWeekView = new JLabel("Week view");
 		lblWeekView.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 27));
-		lblWeekView.setBounds(326, 6, 153, 33);
+		lblWeekView.setBounds(326, 5, 153, 33);
 		contentPane.add(lblWeekView);
 		
 		btnDayView = new JButton("Day view");

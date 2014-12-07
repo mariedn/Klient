@@ -10,7 +10,7 @@ import javax.swing.JLabel;
 import java.awt.Font;
 
 
-public class CreateNote extends JFrame {
+public class CreateNote extends JPanel {
 
 	private JPanel contentPane;
 	private JLabel lblNewLabel;
@@ -47,7 +47,7 @@ public class CreateNote extends JFrame {
 		
 		lblNewLabel = new JLabel("Create note");
 		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 27));
-		lblNewLabel.setBounds(318, 6, 168, 40);
+		lblNewLabel.setBounds(318, 5, 168, 40);
 		contentPane.add(lblNewLabel);
 		
 		btnShareCalendar = new JButton("Create");

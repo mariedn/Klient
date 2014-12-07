@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 
-public class Weather extends JFrame {
+public class Weather extends JPanel {
 
 	private JPanel contentPane;
 	private JLabel lblNewLabel;
@@ -47,7 +47,7 @@ public class Weather extends JFrame {
 		
 		lblNewLabel = new JLabel("Weather");
 		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 27));
-		lblNewLabel.setBounds(344, 6, 117, 40);
+		lblNewLabel.setBounds(344, 5, 117, 40);
 		contentPane.add(lblNewLabel);
 		
 		btnBackToMenu = new JButton("Back to menu");
@@ -56,7 +56,7 @@ public class Weather extends JFrame {
 		
 		lblTheQuoteOf = new JLabel("Let's go check out the weather");
 		lblTheQuoteOf.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
-		lblTheQuoteOf.setBounds(296, 54, 213, 16);
+		lblTheQuoteOf.setBounds(296, 50, 213, 16);
 		contentPane.add(lblTheQuoteOf);
 		
 		btnLogout = new JButton("Log-out");

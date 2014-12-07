@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 
-public class Quote extends JFrame {
+public class Quote extends JPanel {
 
 	private JPanel contentPane;
 	private JLabel lblNewLabel;
@@ -47,7 +47,7 @@ public class Quote extends JFrame {
 		
 		lblNewLabel = new JLabel("Quote");
 		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 27));
-		lblNewLabel.setBounds(357, 6, 91, 40);
+		lblNewLabel.setBounds(357, 5, 91, 40);
 		contentPane.add(lblNewLabel);
 		
 		btnBackToMenu = new JButton("Back to menu");
@@ -56,7 +56,7 @@ public class Quote extends JFrame {
 		
 		lblTheQuoteOf = new JLabel("The quote of the day, enjoy");
 		lblTheQuoteOf.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
-		lblTheQuoteOf.setBounds(307, 54, 192, 16);
+		lblTheQuoteOf.setBounds(307, 50, 192, 16);
 		contentPane.add(lblTheQuoteOf);
 		
 		btnLogout = new JButton("Log-out");

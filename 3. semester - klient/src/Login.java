@@ -1,84 +1,57 @@
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
-import javax.swing.JTextField;
 import java.awt.Font;
+import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
 
 
-public class Login extends JFrame {
-
-	private JPanel contentPane;
+public class Login extends JPanel {
 	private JLabel lblWelcomeToCbs;
-	private JLabel lblPleaseLogin;
+	private JLabel lblNewLabel;
 	private JTextField textField;
-	private JPasswordField passwordField;
+	private JPasswordField pwdPassword;
 	private JLabel lblUsername;
 	private JLabel lblPassword;
 	private JButton btnLogin;
 
 	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Login frame = new Login();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the frame.
+	 * Create the panel.
 	 */
 	public Login() {
-		setTitle("Marie's Calendar");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 805, 400);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
-		contentPane.setLayout(null);
+		setLayout(null);
 		
 		lblWelcomeToCbs = new JLabel("Welcome to CBS Calendar");
+		lblWelcomeToCbs.setBounds(224, 5, 352, 33);
 		lblWelcomeToCbs.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 27));
-		lblWelcomeToCbs.setBounds(221, 16, 362, 41);
-		contentPane.add(lblWelcomeToCbs);
+		add(lblWelcomeToCbs);
 		
-		lblPleaseLogin = new JLabel("Please log-in");
-		lblPleaseLogin.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
-		lblPleaseLogin.setBounds(354, 56, 97, 16);
-		contentPane.add(lblPleaseLogin);
+		lblNewLabel = new JLabel("Please log-in");
+		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
+		lblNewLabel.setBounds(352, 50, 96, 16);
+		add(lblNewLabel);
 		
 		textField = new JTextField();
-		textField.setBounds(256, 105, 292, 39);
-		contentPane.add(textField);
+		textField.setBounds(276, 139, 247, 33);
+		add(textField);
 		textField.setColumns(10);
 		
-		passwordField = new JPasswordField();
-		passwordField.setBounds(256, 172, 292, 39);
-		contentPane.add(passwordField);
+		pwdPassword = new JPasswordField();
+		pwdPassword.setBounds(276, 216, 247, 33);
+		add(pwdPassword);
 		
 		lblUsername = new JLabel("Username");
-		lblUsername.setBounds(266, 91, 79, 16);
-		contentPane.add(lblUsername);
+		lblUsername.setBounds(276, 122, 73, 16);
+		add(lblUsername);
 		
 		lblPassword = new JLabel("Password");
-		lblPassword.setBounds(266, 159, 79, 16);
-		contentPane.add(lblPassword);
+		lblPassword.setBounds(276, 201, 61, 16);
+		add(lblPassword);
 		
 		btnLogin = new JButton("Log-in");
-		btnLogin.setBounds(344, 223, 117, 29);
-		contentPane.add(btnLogin);
+		btnLogin.setBounds(341, 310, 117, 29);
+		add(btnLogin);
+
 	}
+
 }
