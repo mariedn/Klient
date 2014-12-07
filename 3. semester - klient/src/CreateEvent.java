@@ -38,7 +38,7 @@ public class CreateEvent extends JFrame {
 	 */
 	public CreateEvent() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 804, 399);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -46,15 +46,15 @@ public class CreateEvent extends JFrame {
 		
 		lblNewLabel = new JLabel("Create event");
 		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 27));
-		lblNewLabel.setBounds(130, 6, 291, 40);
+		lblNewLabel.setBounds(311, 6, 182, 40);
 		contentPane.add(lblNewLabel);
 		
 		btnShareCalendar = new JButton("Create");
-		btnShareCalendar.setBounds(169, 199, 117, 29);
+		btnShareCalendar.setBounds(343, 199, 117, 29);
 		contentPane.add(btnShareCalendar);
 		
 		btnBackToMenu = new JButton("Back to menu");
-		btnBackToMenu.setBounds(169, 240, 117, 29);
+		btnBackToMenu.setBounds(343, 240, 117, 29);
 		contentPane.add(btnBackToMenu);
 	}
 

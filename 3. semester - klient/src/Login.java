@@ -47,7 +47,7 @@ public class Login extends JFrame {
 	 */
 	public Login() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 805, 400);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -55,33 +55,33 @@ public class Login extends JFrame {
 		
 		lblWelcomeToCbs = new JLabel("Welcome to CBS Calendar");
 		lblWelcomeToCbs.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 27));
-		lblWelcomeToCbs.setBounds(42, 16, 362, 41);
+		lblWelcomeToCbs.setBounds(221, 16, 362, 41);
 		contentPane.add(lblWelcomeToCbs);
 		
 		lblPleaseLogin = new JLabel("Please log-in");
 		lblPleaseLogin.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
-		lblPleaseLogin.setBounds(179, 56, 97, 16);
+		lblPleaseLogin.setBounds(354, 56, 97, 16);
 		contentPane.add(lblPleaseLogin);
 		
 		textField = new JTextField();
-		textField.setBounds(80, 105, 292, 39);
+		textField.setBounds(256, 105, 292, 39);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
 		passwordField = new JPasswordField();
-		passwordField.setBounds(80, 172, 292, 39);
+		passwordField.setBounds(256, 172, 292, 39);
 		contentPane.add(passwordField);
 		
 		lblUsername = new JLabel("Username");
-		lblUsername.setBounds(80, 92, 79, 16);
+		lblUsername.setBounds(266, 91, 79, 16);
 		contentPane.add(lblUsername);
 		
 		lblPassword = new JLabel("Password");
-		lblPassword.setBounds(80, 160, 79, 16);
+		lblPassword.setBounds(266, 159, 79, 16);
 		contentPane.add(lblPassword);
 		
 		btnLogin = new JButton("Log-in");
-		btnLogin.setBounds(159, 223, 117, 29);
+		btnLogin.setBounds(344, 223, 117, 29);
 		contentPane.add(btnLogin);
 	}
 }

@@ -21,6 +21,7 @@ public class Mainmenu extends JFrame {
 	private JButton btnShowDayView;
 	private JButton btnShowWeekView;
 	private JButton btnShowRandom;
+	private JButton btnLogout;
 
 	/**
 	 * Launch the application.
@@ -43,7 +44,7 @@ public class Mainmenu extends JFrame {
 	 */
 	public Mainmenu() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 806, 399);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -51,19 +52,19 @@ public class Mainmenu extends JFrame {
 		
 		lblKalendere = new JLabel("Kalendere");
 		lblKalendere.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 27));
-		lblKalendere.setBounds(147, 6, 148, 47);
+		lblKalendere.setBounds(329, 6, 148, 47);
 		contentPane.add(lblKalendere);
 		
 		btnCreateNewCalendar = new JButton("Create new calendar");
-		btnCreateNewCalendar.setBounds(133, 243, 178, 29);
+		btnCreateNewCalendar.setBounds(314, 243, 178, 29);
 		contentPane.add(btnCreateNewCalendar);
 		
 		btnShowWeatherforecast = new JButton("Show weatherforecast");
-		btnShowWeatherforecast.setBounds(133, 202, 178, 29);
+		btnShowWeatherforecast.setBounds(314, 202, 178, 29);
 		contentPane.add(btnShowWeatherforecast);
 		
 		btnShowDayView = new JButton("Show day view");
-		btnShowDayView.setBounds(133, 79, 178, 29);
+		btnShowDayView.setBounds(314, 79, 178, 29);
 		contentPane.add(btnShowDayView);
 		
 		btnShowWeekView = new JButton("Show week view");
@@ -71,7 +72,7 @@ public class Mainmenu extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btnShowWeekView.setBounds(133, 120, 178, 29);
+		btnShowWeekView.setBounds(314, 120, 178, 29);
 		contentPane.add(btnShowWeekView);
 		
 		btnShowRandom = new JButton("Show random quote");
@@ -79,8 +80,12 @@ public class Mainmenu extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnShowRandom.setBounds(133, 161, 178, 29);
+		btnShowRandom.setBounds(314, 161, 178, 29);
 		contentPane.add(btnShowRandom);
+		
+		btnLogout = new JButton("Log-out");
+		btnLogout.setBounds(314, 284, 178, 29);
+		contentPane.add(btnLogout);
 		
 	}
 }
