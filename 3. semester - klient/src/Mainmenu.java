@@ -8,16 +8,19 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JList;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 
 public class Mainmenu extends JFrame {
 
 	private JPanel contentPane;
 	private JLabel lblKalendere;
-	private JLabel lblEgneKalendere;
-	private JLabel lblDelteKalender;
-	private JList list;
 	private JButton btnCreateNewCalendar;
+	private JButton btnShowWeatherforecast;
+	private JButton btnShowDayView;
+	private JButton btnShowWeekView;
+	private JButton btnShowRandom;
 
 	/**
 	 * Launch the application.
@@ -48,24 +51,36 @@ public class Mainmenu extends JFrame {
 		
 		lblKalendere = new JLabel("Kalendere");
 		lblKalendere.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 27));
-		lblKalendere.setBounds(148, 20, 148, 47);
+		lblKalendere.setBounds(147, 6, 148, 47);
 		contentPane.add(lblKalendere);
-		
-		lblEgneKalendere = new JLabel("Egne kalendere");
-		lblEgneKalendere.setBounds(6, 77, 100, 16);
-		contentPane.add(lblEgneKalendere);
-		
-		lblDelteKalender = new JLabel("Delte kalender");
-		lblDelteKalender.setBounds(292, 79, 100, 16);
-		contentPane.add(lblDelteKalender);
-		
-		list = new JList();
-		list.setBounds(16, 105, 1, 1);
-		contentPane.add(list);
 		
 		btnCreateNewCalendar = new JButton("Create new calendar");
 		btnCreateNewCalendar.setBounds(133, 243, 178, 29);
 		contentPane.add(btnCreateNewCalendar);
+		
+		btnShowWeatherforecast = new JButton("Show weatherforecast");
+		btnShowWeatherforecast.setBounds(133, 202, 178, 29);
+		contentPane.add(btnShowWeatherforecast);
+		
+		btnShowDayView = new JButton("Show day view");
+		btnShowDayView.setBounds(133, 79, 178, 29);
+		contentPane.add(btnShowDayView);
+		
+		btnShowWeekView = new JButton("Show week view");
+		btnShowWeekView.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btnShowWeekView.setBounds(133, 120, 178, 29);
+		contentPane.add(btnShowWeekView);
+		
+		btnShowRandom = new JButton("Show random quote");
+		btnShowRandom.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnShowRandom.setBounds(133, 161, 178, 29);
+		contentPane.add(btnShowRandom);
 		
 	}
 }

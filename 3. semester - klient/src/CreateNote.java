@@ -1,17 +1,21 @@
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+
 import java.awt.Font;
 
 
 public class CreateNote extends JFrame {
 
 	private JPanel contentPane;
-	private JLabel lblCreateNote;
+	private JLabel lblNewLabel;
+	private JButton btnShareCalendar;
+	private JButton btnBackToMenu;
 
 	/**
 	 * Launch the application.
@@ -20,7 +24,7 @@ public class CreateNote extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					CreateNote frame = new CreateNote();
+					CreateCalendar frame = new CreateCalendar();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -40,10 +44,18 @@ public class CreateNote extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		lblCreateNote = new JLabel("Create Note");
-		lblCreateNote.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 27));
-		lblCreateNote.setBounds(130, 6, 177, 25);
-		contentPane.add(lblCreateNote);
+		lblNewLabel = new JLabel("Create note");
+		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 27));
+		lblNewLabel.setBounds(136, 6, 291, 40);
+		contentPane.add(lblNewLabel);
+		
+		btnShareCalendar = new JButton("Create");
+		btnShareCalendar.setBounds(169, 199, 117, 29);
+		contentPane.add(btnShareCalendar);
+		
+		btnBackToMenu = new JButton("Back to menu");
+		btnBackToMenu.setBounds(169, 240, 117, 29);
+		contentPane.add(btnBackToMenu);
 	}
 
 }
