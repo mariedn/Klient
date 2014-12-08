@@ -24,14 +24,6 @@ public class CalendarDay extends JPanel {
 	private JButton btnDeleteEvent;
 	private JButton btnMenu;
 	private JButton btnLogout;
-	private JLabel lblTime;
-	private JLabel lblMon;
-	private JLabel lblTue;
-	private JLabel lblWed;
-	private JLabel lblThu;
-	private JLabel lblFri;
-	private JLabel lblSaturday;
-	private JLabel lblSunday;
 	private JTable table;
 	private JButton btnAddNote_1;
 
@@ -97,49 +89,39 @@ public class CalendarDay extends JPanel {
 		btnLogout.setBounds(683, 323, 117, 29);
 		contentPane.add(btnLogout);
 		
-		lblTime = new JLabel("Time");
-		lblTime.setFont(new Font("Lucida Grande", Font.BOLD, 13));
-		lblTime.setBounds(10, 58, 61, 16);
-		contentPane.add(lblTime);
+		String [] columnNames = {"time", "xxxx", "xxxx", "xxxx", "xxxx", "xxxx"};
+		Object [][] data = {
+				{"01.00", null, null, null, null, null},
+				{"02.00", null, null, null, null, null},
+				{"03.00", null, null, null, null, null},
+				{"04.00", null, null, null, null, null},
+				{"05.00", null, null, null, null, null},
+				{"06.00", null, null, null, null, null},
+				{"07.00", null, null, null, null, null},
+				{"08.00", null, null, null, null, null},
+				{"09.00", null, null, null, null, null},
+				{"10.00", null, null, null, null, null},
+				{"11.00", null, null, null, null, null},
+				{"12.00", null, null, null, null, null},
+				{"13.00", null, null, null, null, null},
+				{"14.00", null, null, null, null, null},
+				{"15.00", null, null, null, null, null},
+				{"16.00", null, null, null, null, null},
+				{"17.00", null, null, null, null, null},
+				{"18.00", null, null, null, null, null},
+				{"19.00", null, null, null, null, null},
+				{"20.00", null, null, null, null, null},
+				{"21.00", null, null, null, null, null},
+				{"22.00", null, null, null, null, null},
+				{"23.00", null, null, null, null, null},
+				{"24.00", null, null, null, null, null},
+		};
 		
-		lblMon = new JLabel("Mon");
-		lblMon.setFont(new Font("Lucida Grande", Font.BOLD, 13));
-		lblMon.setBounds(80, 58, 61, 16);
-		contentPane.add(lblMon);
-		
-		lblTue = new JLabel("Tue");
-		lblTue.setFont(new Font("Lucida Grande", Font.BOLD, 13));
-		lblTue.setBounds(160, 58, 61, 16);
-		contentPane.add(lblTue);
-		
-		lblWed = new JLabel("Wed");
-		lblWed.setFont(new Font("Lucida Grande", Font.BOLD, 13));
-		lblWed.setBounds(240, 58, 75, 16);
-		contentPane.add(lblWed);
-		
-		lblThu = new JLabel("Thu");
-		lblThu.setFont(new Font("Lucida Grande", Font.BOLD, 13));
-		lblThu.setBounds(320, 58, 61, 16);
-		contentPane.add(lblThu);
-		
-		lblFri = new JLabel("Fri");
-		lblFri.setFont(new Font("Lucida Grande", Font.BOLD, 13));
-		lblFri.setBounds(400, 58, 61, 16);
-		contentPane.add(lblFri);
-		
-		lblSaturday = new JLabel("Sat");
-		lblSaturday.setFont(new Font("Lucida Grande", Font.BOLD, 13));
-		lblSaturday.setBounds(480, 58, 61, 16);
-		contentPane.add(lblSaturday);
-		
-		lblSunday = new JLabel("Sun");
-		lblSunday.setFont(new Font("Lucida Grande", Font.BOLD, 13));
-		lblSunday.setBounds(560, 58, 61, 16);
-		contentPane.add(lblSunday);
-		
-		table = new JTable();
-		table.setBounds(404, 159, -29, -52);
+		table = new JTable(data, columnNames);
+		table.setBounds(10, 80, 650, 315);
 		contentPane.add(table);
+		table.setRowHeight(13);
+		table.setShowGrid(true);
 		
 		btnAddNote_1 = new JButton("Add Event");
 		btnAddNote_1.setBounds(683, 200, 117, 29);
