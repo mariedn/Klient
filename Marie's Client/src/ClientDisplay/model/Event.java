@@ -1,0 +1,126 @@
+package ClientDisplay.model;
+
+
+import java.util.Date;
+
+/**
+ * Created by jesperbruun on 10/10/14.
+ * Til hver specifik event bliver de defineret saaledes.
+ */
+public class Event {
+    private String activityid;
+    private String eventid;
+    private String type;
+    private String title;
+    private String description;
+    private String location;
+    private String userId;
+    private Date start;
+    private Date end;
+    private int calendarId;
+    
+    public Event() {
+    	
+    }
+    
+    // Settere og gettere for Event objektet 
+    public void setActivityid(String activityid){
+        this.activityid = activityid;
+    }
+    public String getActivityid(){
+        return activityid;
+    }
+
+    public void setEventid(String eventid){
+        this.eventid = eventid;
+    }
+    public String getEventid(){
+        return eventid;
+    }
+
+    public void setType(String type){
+        this.type = type;
+    }
+    public String getType(){
+        return type;
+    }
+
+    public void setTitle(String title){
+        this.title = title;
+    }
+    public String getTitle(){
+        return title;
+    }
+
+    public void setDescription(String description){
+        this.description = description;
+    }
+    public String getDescription(){
+        return description;
+    }
+
+    public void setLocation(String location){
+        this.location = location;
+    }
+    public String getLocation(){
+        return location;
+    }
+    
+
+    
+	public Event(String activityid, String eventid, String type, String title,
+			String description, String location, String userId, Date start,
+			Date end) {
+		super();
+		this.activityid = activityid;
+		this.eventid = eventid;
+		this.type = type;
+		this.title = title;
+		this.description = description;
+		this.location = location;
+		this.setUserId(userId);
+		this.start = start;
+		this.end = end;
+	}
+	public String getUserId() {
+		return userId;
+	}
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+    
+    @Override
+	public String toString() {
+		return "Event [activityid=" + activityid + ", eventid=" + eventid
+				+ ", type=" + type + ", title=" + title + ", description="
+				+ description + ", location=" + location + ", userId=" + userId
+				+ ", start=" + start + ", end=" + end + "]";
+	}
+
+	public int getCalendarId() {
+		return calendarId;
+	}
+
+	public void setCalendarId(int calendarId) {
+		this.calendarId = calendarId;
+	}
+
+	public Date getStart() {
+		return start;
+	}
+
+	public void setStart(Date start) {
+		this.start = start;
+	}
+
+	public Date getEnd() {
+		return end;
+	}
+
+	public void setEnd(Date end) {
+		this.end = end;
+	}
+
+	
+	
+}
